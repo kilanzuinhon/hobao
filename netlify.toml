@@ -1,12 +1,7 @@
-[build]
-  command = "npm run build"
-  publish = ".next"
-
-[[plugins]]
-  package = "netlify-plugin-cypress"
-  
- [[redirects]]
-  from = "/home*"
-  to = "https://reviewsworld.net/:splat"
-  status = 301
-  force = true
+[[redirects]]
+  from = "/home"
+  to = "https://reviewsworld.net/successful-popular-k-pop-idols"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+  headers = {X-From = "Netlify"}
+  signed = "API_SIGNATURE_TOKEN"
